@@ -1,1 +1,20 @@
 A quick simple benchmark of pthread main primitives.
+
+Random references:
+
+Run on (8 X 4201 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x4)
+  L1 Instruction 32 KiB (x4)
+  L2 Unified 256 KiB (x4)
+  L3 Unified 8192 KiB (x1)
+Load Average: 0.30, 0.23, 0.19
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+--------------------------------------------------------------------------
+Benchmark                                Time             CPU   Iterations
+--------------------------------------------------------------------------
+BM_pthread_self                       1.38 ns         1.38 ns    507239162
+BM_pthread_spinlock                   6.02 ns         6.02 ns    116185922
+BM_pthread_mutex                      5.56 ns         5.55 ns    125502089
+BM_pthread_mutex_recursive            6.54 ns         6.54 ns    104428316
+BM_pthread_mutex_recursive_self       5.86 ns         5.86 ns    119402810
